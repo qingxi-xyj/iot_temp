@@ -15,6 +15,7 @@
 #include "esp_event.h"
 #include "esp_netif.h"
 #include "esp_wifi.h"
+#include "wakeword_service.h"
 
 static const char *TAG = "APP";
 
@@ -82,9 +83,15 @@ void app_main(void)
     }
 
     wifi_init_sta();
+    wakeword_service_start();
 
     // Placeholder – nothing else yet. The RTOS idle task keeps running.
-    while (true) {
-        vTaskDelay(pdMS_TO_TICKS(1000));
+    while (1) {
+        if (wakeword_is_waked()) {
+            ESP_LOGI("APP", "捕获到唤醒词，进入下一步 STT");
+            wakeword_reset();
+            // TODO: 调用 STT 流程
+        }
+        vTaskDelay(pdMS_TO_TICKS(200));
     }
 }

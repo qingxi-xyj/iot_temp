@@ -3,3 +3,4 @@ source "D:/ESP32/Espressif/frameworks/esp-idf-v5.4.1/components/esp_app_format/K
 source "D:/ESP32/Espressif/frameworks/esp-idf-v5.4.1/components/esp_rom/Kconfig.projbuild"
 source "D:/ESP32/Espressif/frameworks/esp-idf-v5.4.1/components/esptool_py/Kconfig.projbuild"
 source "D:/ESP32/Espressif/frameworks/esp-idf-v5.4.1/components/partition_table/Kconfig.projbuild"
+source "C:/Users/Admin/Desktop/Lexin_temp/Final_iot/components/esp-sr/Kconfig.projbuild"

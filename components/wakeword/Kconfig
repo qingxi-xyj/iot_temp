@@ -1,0 +1,8 @@
+menu "Wake-Word Service"
+    config WAKEWORD_STACK_SIZE
+        int "Wake-word task stack size"
+        default 4096
+    config WAKEWORD_DETECT_LOG
+        bool "Print log when keyword detected"
+        default y
+endmenu

@@ -17,4 +17,4 @@ set confirm off
 set confirm on
 
 # Load application symbols
-file C:/Users/Admin/Desktop/Lexin_temp/Final_iot/build/lexin_voice_cam.elf
+file C:/Users/Admin/Desktop/Lexin_temp/Final_iot/build/Final_iot.elf
