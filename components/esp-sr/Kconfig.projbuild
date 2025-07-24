@@ -46,41 +46,42 @@ choice SR_VADN_MODEL_LOAD
 
     config SR_VADN_WEBRTC
         bool "voice activity detection (WebRTC)"
-    
+
     config SR_VADN_VADNET1_MEDIUM
         bool "voice activity detection (vadnet1 medium)"
 	    depends on IDF_TARGET_ESP32S3 ||  IDF_TARGET_ESP32P4
 endchoice
 
-choice SR_WN_MODEL_LOAD
-    prompt "Select wake words"
-    default SR_WN_WN5_HILEXIN
-    depends on IDF_TARGET_ESP32
-    help
-        Select the Wake Words to be loaded.
 
-    config SR_WN_WN5_HILEXIN
-        bool "Hi,Lexin (wn5_hilexin)"
+menu "Load Multiple Wake Words (WakeNet9s)"
 
-    config SR_WN_WN5X3_HILEXIN
-        bool "Hi,Lexin (wn5_hilexinX3)"
+    config SR_WN_WN9S_HILEXIN
+    bool "Hi,乐鑫 (wn9s_hilexin)"
+    default False
 
-    config SR_WN_WN5_NIHAOXIAOZHI
-        bool "nihaoxiaozhi (wn5_nihaoxiaozhi)"
+    config SR_WN_WN9S_HIESP
+    bool "Hi,ESP (wn9s_hiesp)"
+    default False
 
-    config SR_WN_WN5X3_NIHAOXIAOZHI
-        bool "nihaoxiaozhi (wn5_nihaoxiaozhiX3)"
+    config SR_WN_WN9S_NIHAOXIAOZHI
+    bool "你好小智 (wn9s_nihaoxiaozhi)"
+    default False
 
-    config SR_WN_WN5X3_NIHAOXIAOXIN
-        bool "nihaoxiaoxin (wn5_nihaoxiaoxinX3)"
+    config SR_WN_WN9S_HIJASON
+    bool "Hi,Jason (wn9s_hijason)"
+    default False
 
-endchoice
+endmenu
 
-menu "Load Multiple Wake Words"
-    depends on IDF_TARGET_ESP32S3 ||  IDF_TARGET_ESP32P4
+menu "Load Multiple Wake Words (WakeNet9)"
+    depends on IDF_TARGET_ESP32S3 ||  IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32
 
     config SR_WN_WN9_HILEXIN
     bool "Hi,乐鑫 (wn9_hilexin)"
+    default False
+
+    config SR_WN_WN9_NIHAOMIAOBAN_TTS2
+    bool "你好喵伴 (wn9_nihaomiaoban_tts2)"
     default False
 
     config SR_WN_WN9_XIAOAITONGXUE
@@ -102,7 +103,7 @@ menu "Load Multiple Wake Words"
     config SR_WN_WN9_JARVIS_TTS
     bool "Jarvis (wn9_jarvis_tts)"
     default False
-    
+
     config SR_WN_WN9_COMPUTER_TTS
     bool "computer (wn9_computer_tts)"
     default False
@@ -173,6 +174,10 @@ menu "Load Multiple Wake Words"
     bool "Astrolabe (wn9_astrolabe_tts)"
     default False
 
+    config SR_WN_WN9_HEYILY_TTS2
+    bool "Hey,Ily (wn9_heyily_tts2)"
+    default False
+
     config SR_WN_WN9_XIAOYAXIAOYA_TTS2
     bool "小鸭小鸭 (wn9_xiaoyaxiaoya_tts2)"
     default False
@@ -191,6 +196,48 @@ menu "Load Multiple Wake Words"
 
     config SR_WN_WN9_XIAOYUTONGXUE_TTS2
     bool "小宇同学 (wn9_xiaoyutongxue_tts2)"
+    default False
+
+    config SR_WN_WN9_XIAOMINGTONGXUE_TTS2
+    bool "小明同学 (wn9_xiaomingtongxue_tts2)"
+    default False
+
+    config SR_WN_WN9_XIAOKANGTONGXUE_TTS2
+    bool "小康同学 (wn9_xiaokangtongxue_tts2)"
+    default False
+
+    config SR_WN_WN9_XIAOJIANXIAOJIAN_TTS2
+    bool "小箭小箭 (wn9_xiaojianxiaojian_tts2)"
+    default False
+
+    config SR_WN_WN9_XIAOTEXIAOTE_TTS2
+    bool "小特小特 (wn9_xiaotexiaote_tts2)"
+    default False
+
+    config SR_WN_WN9_NIHAOXIAOYI_TTS2
+    bool "你好小益 (wn9_nihaoxiaoyi_tts2)"
+    default False
+
+
+    config SR_WN_WN9_NIHAOBAIYING_TTS2
+    bool "你好百应 (wn9_nihaobaiying_tts2)"
+    default False
+
+    config SR_WN_WN9_NIHAODONGDONG_TTS2
+    bool "你好东东 (wn9_nihaodongdong_tts2)"
+    default False
+
+    config SR_WN_WN9_HIWALLE_TTS2
+    bool "Hi Wall E or Hi 瓦力(wn9_hiwalle_tts2)"
+    default False
+
+    config SR_WN_WN9_HIMFIVE
+    bool "Hi,M Five (wn9_himfive)"
+    default False
+
+
+    config SR_WN_WN9_XIAOLUXIAOLU_TTS2
+    bool "小鹿小鹿 (wn9_xiaoluxiaolu_tts2)"
     default False
 endmenu
 

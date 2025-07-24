@@ -6521,67 +6521,55 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "<choice SR_WN_MODEL_LOAD>",
+                        "depends_on": null,
                         "help": null,
-                        "id": "SR_WN_WN5_HILEXIN",
-                        "name": "SR_WN_WN5_HILEXIN",
+                        "id": "SR_WN_WN9S_HILEXIN",
+                        "name": "SR_WN_WN9S_HILEXIN",
                         "range": null,
-                        "title": "Hi,Lexin (wn5_hilexin)",
+                        "title": "Hi,\u4e50\u946b (wn9s_hilexin)",
                         "type": "bool"
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice SR_WN_MODEL_LOAD>",
+                        "depends_on": null,
                         "help": null,
-                        "id": "SR_WN_WN5X3_HILEXIN",
-                        "name": "SR_WN_WN5X3_HILEXIN",
+                        "id": "SR_WN_WN9S_HIESP",
+                        "name": "SR_WN_WN9S_HIESP",
                         "range": null,
-                        "title": "Hi,Lexin (wn5_hilexinX3)",
+                        "title": "Hi,ESP (wn9s_hiesp)",
                         "type": "bool"
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice SR_WN_MODEL_LOAD>",
+                        "depends_on": null,
                         "help": null,
-                        "id": "SR_WN_WN5_NIHAOXIAOZHI",
-                        "name": "SR_WN_WN5_NIHAOXIAOZHI",
+                        "id": "SR_WN_WN9S_NIHAOXIAOZHI",
+                        "name": "SR_WN_WN9S_NIHAOXIAOZHI",
                         "range": null,
-                        "title": "nihaoxiaozhi (wn5_nihaoxiaozhi)",
+                        "title": "\u4f60\u597d\u5c0f\u667a (wn9s_nihaoxiaozhi)",
                         "type": "bool"
                     },
                     {
                         "children": [],
-                        "depends_on": "<choice SR_WN_MODEL_LOAD>",
+                        "depends_on": null,
                         "help": null,
-                        "id": "SR_WN_WN5X3_NIHAOXIAOZHI",
-                        "name": "SR_WN_WN5X3_NIHAOXIAOZHI",
+                        "id": "SR_WN_WN9S_HIJASON",
+                        "name": "SR_WN_WN9S_HIJASON",
                         "range": null,
-                        "title": "nihaoxiaozhi (wn5_nihaoxiaozhiX3)",
-                        "type": "bool"
-                    },
-                    {
-                        "children": [],
-                        "depends_on": "<choice SR_WN_MODEL_LOAD>",
-                        "help": null,
-                        "id": "SR_WN_WN5X3_NIHAOXIAOXIN",
-                        "name": "SR_WN_WN5X3_NIHAOXIAOXIN",
-                        "range": null,
-                        "title": "nihaoxiaoxin (wn5_nihaoxiaoxinX3)",
+                        "title": "Hi,Jason (wn9s_hijason)",
                         "type": "bool"
                     }
                 ],
-                "depends_on": "IDF_TARGET_ESP32",
-                "help": "Select the Wake Words to be loaded.",
-                "id": "esp-speech-recognition-select-wake-words",
-                "name": "SR_WN_MODEL_LOAD",
-                "title": "Select wake words",
-                "type": "choice"
+                "depends_on": null,
+                "id": "esp-speech-recognition-load-multiple-wake-words-wakenet9s-",
+                "title": "Load Multiple Wake Words (WakeNet9s)",
+                "type": "menu"
             },
             {
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_HILEXIN",
                         "name": "SR_WN_WN9_HILEXIN",
@@ -6591,7 +6579,17 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
+                        "help": null,
+                        "id": "SR_WN_WN9_NIHAOMIAOBAN_TTS2",
+                        "name": "SR_WN_WN9_NIHAOMIAOBAN_TTS2",
+                        "range": null,
+                        "title": "\u4f60\u597d\u55b5\u4f34 (wn9_nihaomiaoban_tts2)",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_XIAOAITONGXUE",
                         "name": "SR_WN_WN9_XIAOAITONGXUE",
@@ -6601,7 +6599,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_NIHAOXIAOZHI_TTS",
                         "name": "SR_WN_WN9_NIHAOXIAOZHI_TTS",
@@ -6611,7 +6609,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_ALEXA",
                         "name": "SR_WN_WN9_ALEXA",
@@ -6621,7 +6619,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_HIESP",
                         "name": "SR_WN_WN9_HIESP",
@@ -6631,7 +6629,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_JARVIS_TTS",
                         "name": "SR_WN_WN9_JARVIS_TTS",
@@ -6641,7 +6639,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_COMPUTER_TTS",
                         "name": "SR_WN_WN9_COMPUTER_TTS",
@@ -6651,7 +6649,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_HEYWILLOW_TTS",
                         "name": "SR_WN_WN9_HEYWILLOW_TTS",
@@ -6661,7 +6659,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_SOPHIA_TTS",
                         "name": "SR_WN_WN9_SOPHIA_TTS",
@@ -6671,7 +6669,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_NIHAOXIAOXIN_TTS",
                         "name": "SR_WN_WN9_NIHAOXIAOXIN_TTS",
@@ -6681,7 +6679,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_XIAOMEITONGXUE_TTS",
                         "name": "SR_WN_WN9_XIAOMEITONGXUE_TTS",
@@ -6691,7 +6689,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_HEYPRINTER_TTS",
                         "name": "SR_WN_WN9_HEYPRINTER_TTS",
@@ -6701,7 +6699,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_XIAOLONGXIAOLONG_TTS",
                         "name": "SR_WN_WN9_XIAOLONGXIAOLONG_TTS",
@@ -6711,7 +6709,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_MIAOMIAOTONGXUE_TTS",
                         "name": "SR_WN_WN9_MIAOMIAOTONGXUE_TTS",
@@ -6721,7 +6719,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_HEYWANDA_TTS",
                         "name": "SR_WN_WN9_HEYWANDA_TTS",
@@ -6731,7 +6729,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_HIMIAOMIAO_TTS",
                         "name": "SR_WN_WN9_HIMIAOMIAO_TTS",
@@ -6741,7 +6739,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_MYCROFT_TTS",
                         "name": "SR_WN_WN9_MYCROFT_TTS",
@@ -6751,7 +6749,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_HIJOY_TTS",
                         "name": "SR_WN_WN9_HIJOY_TTS",
@@ -6761,7 +6759,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_HILILI_TTS",
                         "name": "SR_WN_WN9_HILILI_TTS",
@@ -6771,7 +6769,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_HITELLY_TTS",
                         "name": "SR_WN_WN9_HITELLY_TTS",
@@ -6781,7 +6779,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_XIAOBINXIAOBIN_TTS",
                         "name": "SR_WN_WN9_XIAOBINXIAOBIN_TTS",
@@ -6791,7 +6789,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_HAIXIAOWU_TTS",
                         "name": "SR_WN_WN9_HAIXIAOWU_TTS",
@@ -6801,7 +6799,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_ASTROLABE_TTS",
                         "name": "SR_WN_WN9_ASTROLABE_TTS",
@@ -6811,7 +6809,17 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
+                        "help": null,
+                        "id": "SR_WN_WN9_HEYILY_TTS2",
+                        "name": "SR_WN_WN9_HEYILY_TTS2",
+                        "range": null,
+                        "title": "Hey,Ily (wn9_heyily_tts2)",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_XIAOYAXIAOYA_TTS2",
                         "name": "SR_WN_WN9_XIAOYAXIAOYA_TTS2",
@@ -6821,7 +6829,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_HIJASON_TTS2",
                         "name": "SR_WN_WN9_HIJASON_TTS2",
@@ -6831,7 +6839,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_LINAIBAN_TTS2",
                         "name": "SR_WN_WN9_LINAIBAN_TTS2",
@@ -6841,7 +6849,7 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_XIAOSUROU_TTS2",
                         "name": "SR_WN_WN9_XIAOSUROU_TTS2",
@@ -6851,18 +6859,118 @@
                     },
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
                         "help": null,
                         "id": "SR_WN_WN9_XIAOYUTONGXUE_TTS2",
                         "name": "SR_WN_WN9_XIAOYUTONGXUE_TTS2",
                         "range": null,
                         "title": "\u5c0f\u5b87\u540c\u5b66 (wn9_xiaoyutongxue_tts2)",
                         "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
+                        "help": null,
+                        "id": "SR_WN_WN9_XIAOMINGTONGXUE_TTS2",
+                        "name": "SR_WN_WN9_XIAOMINGTONGXUE_TTS2",
+                        "range": null,
+                        "title": "\u5c0f\u660e\u540c\u5b66 (wn9_xiaomingtongxue_tts2)",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
+                        "help": null,
+                        "id": "SR_WN_WN9_XIAOKANGTONGXUE_TTS2",
+                        "name": "SR_WN_WN9_XIAOKANGTONGXUE_TTS2",
+                        "range": null,
+                        "title": "\u5c0f\u5eb7\u540c\u5b66 (wn9_xiaokangtongxue_tts2)",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
+                        "help": null,
+                        "id": "SR_WN_WN9_XIAOJIANXIAOJIAN_TTS2",
+                        "name": "SR_WN_WN9_XIAOJIANXIAOJIAN_TTS2",
+                        "range": null,
+                        "title": "\u5c0f\u7bad\u5c0f\u7bad (wn9_xiaojianxiaojian_tts2)",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
+                        "help": null,
+                        "id": "SR_WN_WN9_XIAOTEXIAOTE_TTS2",
+                        "name": "SR_WN_WN9_XIAOTEXIAOTE_TTS2",
+                        "range": null,
+                        "title": "\u5c0f\u7279\u5c0f\u7279 (wn9_xiaotexiaote_tts2)",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
+                        "help": null,
+                        "id": "SR_WN_WN9_NIHAOXIAOYI_TTS2",
+                        "name": "SR_WN_WN9_NIHAOXIAOYI_TTS2",
+                        "range": null,
+                        "title": "\u4f60\u597d\u5c0f\u76ca (wn9_nihaoxiaoyi_tts2)",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
+                        "help": null,
+                        "id": "SR_WN_WN9_NIHAOBAIYING_TTS2",
+                        "name": "SR_WN_WN9_NIHAOBAIYING_TTS2",
+                        "range": null,
+                        "title": "\u4f60\u597d\u767e\u5e94 (wn9_nihaobaiying_tts2)",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
+                        "help": null,
+                        "id": "SR_WN_WN9_NIHAODONGDONG_TTS2",
+                        "name": "SR_WN_WN9_NIHAODONGDONG_TTS2",
+                        "range": null,
+                        "title": "\u4f60\u597d\u4e1c\u4e1c (wn9_nihaodongdong_tts2)",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
+                        "help": null,
+                        "id": "SR_WN_WN9_HIWALLE_TTS2",
+                        "name": "SR_WN_WN9_HIWALLE_TTS2",
+                        "range": null,
+                        "title": "Hi Wall E or Hi \u74e6\u529b(wn9_hiwalle_tts2)",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
+                        "help": null,
+                        "id": "SR_WN_WN9_HIMFIVE",
+                        "name": "SR_WN_WN9_HIMFIVE",
+                        "range": null,
+                        "title": "Hi,M Five (wn9_himfive)",
+                        "type": "bool"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
+                        "help": null,
+                        "id": "SR_WN_WN9_XIAOLUXIAOLU_TTS2",
+                        "name": "SR_WN_WN9_XIAOLUXIAOLU_TTS2",
+                        "range": null,
+                        "title": "\u5c0f\u9e7f\u5c0f\u9e7f (wn9_xiaoluxiaolu_tts2)",
+                        "type": "bool"
                     }
                 ],
-                "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
-                "id": "esp-speech-recognition-load-multiple-wake-words",
-                "title": "Load Multiple Wake Words",
+                "depends_on": "IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4 || IDF_TARGET_ESP32",
+                "id": "esp-speech-recognition-load-multiple-wake-words-wakenet9-",
+                "title": "Load Multiple Wake Words (WakeNet9)",
                 "type": "menu"
             },
             {
@@ -36191,7 +36299,7 @@
                 "children": [
                     {
                         "children": [],
-                        "depends_on": "IDF_TARGET_ESP32 || IDF_TARGET_ESP32S3",
+                        "depends_on": "IDF_TARGET_ESP32 || IDF_TARGET_ESP32S3 || IDF_TARGET_ESP32P4",
                         "help": null,
                         "id": "DSP_OPTIMIZATIONS_SUPPORTED",
                         "name": "DSP_OPTIMIZATIONS_SUPPORTED",

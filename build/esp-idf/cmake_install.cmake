@@ -559,6 +559,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("C:/Users/Admin/Desktop/Lexin_temp/Final_iot/build/esp-idf/espressif__dl_fft/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("C:/Users/Admin/Desktop/Lexin_temp/Final_iot/build/esp-idf/esp-sr/cmake_install.cmake")
 endif()
 

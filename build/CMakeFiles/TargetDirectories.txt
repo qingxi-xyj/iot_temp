@@ -842,8 +842,14 @@ C:/Users/Admin/Desktop/Lexin_temp/Final_iot/build/esp-idf/espressif__esp-dsp/CMa
 C:/Users/Admin/Desktop/Lexin_temp/Final_iot/build/esp-idf/espressif__esp-dsp/CMakeFiles/install.dir
 C:/Users/Admin/Desktop/Lexin_temp/Final_iot/build/esp-idf/espressif__esp-dsp/CMakeFiles/install/local.dir
 C:/Users/Admin/Desktop/Lexin_temp/Final_iot/build/esp-idf/espressif__esp-dsp/CMakeFiles/install/strip.dir
+C:/Users/Admin/Desktop/Lexin_temp/Final_iot/build/esp-idf/espressif__dl_fft/CMakeFiles/__idf_espressif__dl_fft.dir
+C:/Users/Admin/Desktop/Lexin_temp/Final_iot/build/esp-idf/espressif__dl_fft/CMakeFiles/edit_cache.dir
+C:/Users/Admin/Desktop/Lexin_temp/Final_iot/build/esp-idf/espressif__dl_fft/CMakeFiles/rebuild_cache.dir
+C:/Users/Admin/Desktop/Lexin_temp/Final_iot/build/esp-idf/espressif__dl_fft/CMakeFiles/list_install_components.dir
+C:/Users/Admin/Desktop/Lexin_temp/Final_iot/build/esp-idf/espressif__dl_fft/CMakeFiles/install.dir
+C:/Users/Admin/Desktop/Lexin_temp/Final_iot/build/esp-idf/espressif__dl_fft/CMakeFiles/install/local.dir
+C:/Users/Admin/Desktop/Lexin_temp/Final_iot/build/esp-idf/espressif__dl_fft/CMakeFiles/install/strip.dir
 C:/Users/Admin/Desktop/Lexin_temp/Final_iot/build/esp-idf/esp-sr/CMakeFiles/__idf_esp-sr.dir
-C:/Users/Admin/Desktop/Lexin_temp/Final_iot/build/esp-idf/esp-sr/CMakeFiles/srmodels_bin.dir
 C:/Users/Admin/Desktop/Lexin_temp/Final_iot/build/esp-idf/esp-sr/CMakeFiles/edit_cache.dir
 C:/Users/Admin/Desktop/Lexin_temp/Final_iot/build/esp-idf/esp-sr/CMakeFiles/rebuild_cache.dir
 C:/Users/Admin/Desktop/Lexin_temp/Final_iot/build/esp-idf/esp-sr/CMakeFiles/list_install_components.dir

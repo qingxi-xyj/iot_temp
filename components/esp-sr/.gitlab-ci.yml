@@ -47,6 +47,17 @@ before_script:
   - "test_apps/esp-sr/**/*"
   - "CMakeList.txt"
 
+.patterns-test_esp_sr: &patterns-test_esp32c5
+  - "lib/esp32c5/*"
+  - "lib/esp32c3/*"
+  - "lib/esp32c6/*"
+  - "lib/esp32s2/*"
+  - "include/esp32c5/*"
+  - "src/**/*"
+  - "model/**/*"
+  - "test_apps/esp-sr/**/*"
+  - "CMakeList.txt"
+
 .patterns-build_system: &patterns-build_system
   - "test_apps/build_apps.py"
   - "conftest.py"
@@ -74,6 +85,15 @@ before_script:
       changes: *patterns-build_system
     - <<: *if-dev-push
       changes: *patterns-test_esp_tts
+
+.rules:build:test_esp32c5:
+  rules:
+    - <<: *if-protected
+    - <<: *if-label-build
+    - <<: *if-dev-push
+      changes: *patterns-build_system
+    - <<: *if-dev-push
+      changes: *patterns-test_esp32c5
 
 .rules:build_docs:docs:
   rules:
@@ -123,7 +143,7 @@ build_esp_sr:
     - .rules:build:test_esp_sr
   parallel:
     matrix:
-      - IMAGE: [espressif/idf:release-v5.3, espressif/idf:latest]
+      - IMAGE: [espressif/idf:v5.4.1, espressif/idf:latest]
         EXAMPLES_PATH: "test_apps/esp-sr"
 
 
@@ -133,8 +153,17 @@ build_esp_tts:
     - .rules:build:test_esp_tts
   parallel:
     matrix:
-      - IMAGE: [espressif/idf:release-v5.3, espressif/idf:latest]
+      - IMAGE: [espressif/idf:v5.4.1, espressif/idf:latest]
         EXAMPLES_PATH: "test_apps/esp-tts"
+
+build_esp32c5:
+  extends: 
+    - .build_test_template
+    - .rules:build:test_esp32c5
+  parallel:
+    matrix:
+      - IMAGE: [espressif/idf:v5.4.1, espressif/idf:latest]
+        EXAMPLES_PATH: "test_apps/esp32c5"
 
 .test_template: &test_template
   image: DOCKER_TARGET_TEST_v5_0_ENV_IMAGE
@@ -185,7 +214,7 @@ test_esp_sr:
   image: $DOCKER_TARGET_TEST_v5_3_ENV_IMAGE
   variables:
     TEST_FOLDER: './test_apps/esp-sr'
-    IDF_VERSION: "5.3"
+    IDF_VERSION: "5.4"
 
 test_esp_tts:
   extends:
@@ -204,7 +233,7 @@ test_esp_tts:
   image: $DOCKER_TARGET_TEST_v5_3_ENV_IMAGE
   variables:
     TEST_FOLDER: './test_apps/esp-tts'
-    IDF_VERSION: "5.3"
+    IDF_VERSION: "5.4"
 
 .build_doc_template:
   stage: build_docs
