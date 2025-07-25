@@ -4,7 +4,7 @@
 #include "esp_afe_sr_iface.h"
 #include "esp_afe_sr_models.h"
 #include "esp_srmodel_iface.h" // 新增：用于模型管理
-
+#include "esp_wn_iface.h"
 #include "driver/i2s_std.h"
 #include "esp_log.h"
 #include "freertos/FreeRTOS.h"
